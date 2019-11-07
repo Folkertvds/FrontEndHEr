@@ -1,0 +1,172 @@
+    * {
+        box-sizing: border-box;
+        display: grid;
+    }
+
+    body {
+        box-sizing: border-box;
+        font-family: 'helvetica', sans-serif;
+        margin: 0em;
+        padding: 0em;
+        background-color: gainsboro;
+    }
+
+    /*De knoppen in de navigatie worden gestyled*/
+
+    li {
+        list-style: none;
+        margin: 1em;
+        background: white;
+        padding: 1em;
+        width: 5em;
+        height: 3em;
+        transition: width .3s ease-in, height .3s ease-out .1s;
+        font-family: helvetica;
+        border-radius: .5em;
+        box-shadow: .1em .1em #667;
+    }
+
+    li:hover {
+        text-align: left;
+        width: 7em;
+    }
+
+    ul a {
+        font-size: .8em;
+        text-decoration: none;
+        color: black;
+    }
+
+    /* bron: https://css-tricks.com/dont-overthink-flexbox-grids/*/
+
+
+    ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    header {
+        position: fixed;
+        color: white;
+        padding-bottom: .5em;
+        border-bottom: 0.2em solid #F6F6F6;
+        background-color: gold;
+        width: 100vw;
+    }
+
+
+
+    ul a:active {
+        color: gray;
+    }
+
+
+    ul a:focus {
+        color: darkgray;
+    }
+
+
+    /*artikel gebruikt om tekst en foto's in te verwerken*/
+
+    article {
+        width: 90vw;
+        max-width: 40em;
+        background-color: white;
+        margin-top: 9em;
+        margin: .5em;
+        justify-content: space-between;
+        padding: 1em;
+    }
+
+
+    p {
+        font-size: 1.1em;
+        margin: 3em;
+    }
+
+    /*door de display flex werken de artikelen responsice*/
+
+    .flex-class {
+        padding: 0;
+        margin-top: 1em;
+        list-style: none;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+
+
+    h3 {
+        text-align: center;
+        margin-top: 4em;
+        font-size: 2em;
+        text-align: center;
+    }
+
+    /*grid voor de detailpagina*/
+
+    .flex-grid {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .flex-grid .col {
+        flex: 1;
+        max-width: ;
+    }
+
+    .flex-grid-thirds .col {
+        width: 32%;
+    }
+
+    /*grid wordt bepaald*/
+    @media (max-width: 100%) {
+        .flex-grid,
+        .flex-grid-thirds;
+        display: block;
+    }
+
+    img {
+        width: 80%;
+        max-width: 25em;
+        box-shadow: -6px -4px 14px -4px rgba(0, 0, 0, 0.9);
+        box-shadow: -6px -4px 14px -4px rgba(0, 0, 0, 0.9);
+        box-shadow: -6px -4px 14px -4px rgba(0, 0, 0, 0.9);
+        margin: 2em;
+    }
+
+    img:hover {
+        filter: blur(4px)
+    }
+
+
+    /*https://www.w3schools.com/howto/howto_css_image_overlay.asp
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_fade*/
+
+    .overlay {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+    }
+
+    .ja:hover .overlay {
+        opacity: 1;
+    }
+
+    .text {
+        color: black;
+        background: white;
+        font-size: 1.5em;
+        padding: .5em;
+        position: absolute;
+        top: 60%;
+        text-align: center;
+        width: 12em;
+    }

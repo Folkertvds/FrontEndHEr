@@ -1,0 +1,171 @@
+    * {
+        box-sizing: border-box;
+        display: grid;
+
+    }
+
+
+
+    body {
+        font-family: 'helvetica', sans-serif;
+        margin: 0em;
+        padding: 0em;
+        background-color: gainsboro;
+    }
+
+
+
+    li {
+        list-style: none;
+        margin: 1em;
+        background: white;
+        padding: 1em;
+        width: 5em;
+        height: 3em;
+        transition: width .3s ease-in, height .3s ease-out .1s;
+        font-family: helvetica;
+        border-radius: .5em;
+        box-shadow: .1em .1em #667;
+    }
+
+    li:hover {
+        text-align: left;
+        width: 7em;
+
+    }
+
+    .nav a {
+        font-size: .8em;
+        text-decoration: none;
+        color: black;
+    }
+
+    /* bron: https://css-tricks.com/dont-overthink-flexbox-grids/*/
+
+
+    .nav {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .header {
+        position: fixed;
+        color: white;
+        padding-bottom: .5em;
+        border-bottom: 0.2em solid #F6F6F6;
+        background-color: gold;
+        width: 100vw;
+    }
+
+
+
+    .nav a:active {
+        color: gray;
+    }
+
+
+    .nav a:focus {
+        color: darkgray;
+    }
+
+
+
+    img {
+        width: 10em;
+        margin: 3em;
+        transition: width .3s ease-in, height .3s ease-out .3s;
+    }
+
+
+    img:hover {
+        width: 12em;
+    }
+
+    /*https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+    .flex-class {
+        padding: 0;
+        margin-top: 1em;
+        list-style: none;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+
+    h3 {
+
+        text-align: center;
+        margin-top: 4em;
+
+        font-size: 2em;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1.1em;
+        margin: 3em;
+    }
+
+    /*grid voor de detailpagina
+https://css-tricks.com/snippets/css/complete-guide-grid/*/
+
+    .flex-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        background-color: whitesmoke;
+        padding: 2em;
+    }
+
+    .flex-grid .col {
+        margin: 1em;
+    }
+
+
+    .flex-grid-thirds .col {
+        width: 85%;
+        margin: 1em;
+        margin-left: 1em;
+        max-width: 38em;
+        background-color: white;
+        padding: 1em;
+    }
+
+    /*https://codepen.io/juliogcampos/pen/BzdjwY*/
+
+    h2 {
+        margin-left: 2em;
+        font-size: 1em;
+        text-align: center;
+    }
+
+    #clickme {
+        display: flex;
+        justify-content: center;
+        padding: 1em;
+        width: 10em;
+        margin: 1em;
+        background: green;
+        font-size: 1em;
+        border: 1px solid black;
+        color: ghostwhite;
+    }
+
+    span {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    @media (max-width: 40em) {
+
+        .flex-grid,
+        .flex-grid-thirds {
+            display: block;
+
+        }
+
+        /*padding van de grid*/
+        .col {
+            padding: 1em;
+        }
